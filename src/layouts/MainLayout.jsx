@@ -16,12 +16,10 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <header className="main-header">
-        {/* Left - User Info */}
         <div className="user-info">
           {user ? user.email : "Hello Guest"}
         </div>
 
-        {/* Center - Navigation */}
         <nav className="nav-center">
           <Link to="/">Home</Link>
           {!user && (
@@ -52,7 +50,6 @@ const MainLayout = ({ children }) => {
           {!user && <Link to="/favorites">Favorites</Link>}
         </nav>
 
-        {/* Right - Theme Toggle */}
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <button
             className="theme-toggle-button"
